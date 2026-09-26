@@ -162,5 +162,5 @@ All interactive controls follow a **1 Key = 1 Action** design principle with int
 ## 👨‍💻 Author & Repository
 
 - **Author**: Fardin Hossain
-- **Repository**: [Computer-Graphics-3D-Classroom](https://github.com/fardinhossain/Computer-Graphics-3D-Classroom.git)
-- **Demo Video**: [YouTube Walkthrough](https://www.youtube.com/watch?v=-0teRdISEI4)
+- **Repository**: [Computer-Graphics-3D-Robotics-Classroom](https://github.com/fardinhossain/Computer-Graphics-3D-Robotics-Classroom.git)
+- **Demo Video**: [YouTube Walkthrough](https://youtu.be/pRR0PqkCHco)
