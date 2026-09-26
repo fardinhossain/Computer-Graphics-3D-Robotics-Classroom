@@ -6,9 +6,9 @@ A feature-rich, interactive **3D Virtual Classroom & Embedded Robotics Laborator
 
 ## 📺 Project Demo Video
 
-[![Watch the Demo on YouTube](https://img.youtube.com/vi/-0teRdISEI4/maxresdefault.jpg)](https://www.youtube.com/watch?v=-0teRdISEI4)
+[![Watch the Demo on YouTube](https://img.youtube.com/vi/pRR0PqkCHco/maxresdefault.jpg)](https://youtu.be/pRR0PqkCHco)
 
-▶️ **Watch the demonstration on YouTube**: [https://www.youtube.com/watch?v=-0teRdISEI4](https://www.youtube.com/watch?v=-0teRdISEI4)
+▶️ **Watch the demonstration on YouTube**: [https://youtu.be/pRR0PqkCHco](https://youtu.be/pRR0PqkCHco)
 
 ---
 
