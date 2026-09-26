@@ -104,49 +104,49 @@ float lastX = SCR_WIDTH / 2.0f;
 float lastY = SCR_HEIGHT / 2.0f;
 bool firstMouse = true;
 
-// The 4 Core Camera Views matching Classroom.jpg reference panels
+// The 4 Core Camera Views matching the 4 project screenshots (Image/front.png, back.png, left.png, right.png)
 enum CameraViewMode {
-    VIEW_BACK = 0,    // Key 1: Back View (Initial View - looking down center aisle at blackboard)
-    VIEW_SIDE = 1,    // Key 2: Side View (SIDE VIEW: profile of desks, fan, and windows)
-    VIEW_TOP = 2,     // Key 3: Top View (TOP VIEW: overhead bird's-eye arrangement)
-    VIEW_TEACHER = 3  // Key 4: Teacher View (Front view looking from podium at students)
+    VIEW_FRONT = 0,   // Key 1: Front View (Image/front.png - looking at blackboard & teacher podium)
+    VIEW_BACK = 1,    // Key 2: Back View (Image/back.png - looking from podium at student desks & entrance)
+    VIEW_LEFT = 2,    // Key 3: Left View (Image/left.png - looking at windows & outdoor campus scenery)
+    VIEW_RIGHT = 3    // Key 4: Right View (Image/right.png - looking at door, hallway corridor & robot)
 };
-CameraViewMode currentView = VIEW_BACK;
+CameraViewMode currentView = VIEW_FRONT;
 
 void setCameraPreset(CameraViewMode mode) {
     currentView = mode;
     switch (mode) {
-        case VIEW_BACK: // 1. Initial / Back View (Classroom.jpg main & BACK VIEW panel)
+        case VIEW_FRONT: // 1. Front View (Image/front.png)
             camera.Position = glm::vec3(0.0f, 2.10f, 4.8f);
             camera.Yaw = -90.0f;
             camera.Pitch = 0.0f;
             camera.Zoom = 45.0f;
             camera.updateCameraVectors();
-            cout << "[Camera View 1] INITIAL / BACK VIEW (Looking down aisle at blackboard)" << endl;
+            cout << "[Camera View 1] FRONT VIEW (Looking at blackboard & teacher podium)" << endl;
             break;
-        case VIEW_SIDE: // 2. Side View (Classroom.jpg SIDE VIEW panel)
-            camera.Position = glm::vec3(4.3f, 2.10f, 3.2f);
-            camera.Yaw = -140.0f;
-            camera.Pitch = -3.0f;
-            camera.Zoom = 45.0f;
-            camera.updateCameraVectors();
-            cout << "[Camera View 2] SIDE VIEW (Profile perspective of desks & windows)" << endl;
-            break;
-        case VIEW_TOP: // 3. Top View (Classroom.jpg TOP VIEW panel)
-            camera.Position = glm::vec3(0.0f, 9.2f, -0.2f);
-            camera.Yaw = -90.0f;
-            camera.Pitch = -89.0f;
-            camera.Zoom = 45.0f;
-            camera.updateCameraVectors();
-            cout << "[Camera View 3] TOP VIEW (Overhead bird's-eye layout)" << endl;
-            break;
-        case VIEW_TEACHER: // 4. Teacher View (Front view from podium)
+        case VIEW_BACK: // 2. Back View (Image/back.png)
             camera.Position = glm::vec3(0.0f, 1.80f, -4.8f);
             camera.Yaw = 90.0f;
             camera.Pitch = 0.0f;
             camera.Zoom = 45.0f;
             camera.updateCameraVectors();
-            cout << "[Camera View 4] TEACHER VIEW (Podium looking at students)" << endl;
+            cout << "[Camera View 2] BACK VIEW (From teacher podium looking at student desks & entrance)" << endl;
+            break;
+        case VIEW_LEFT: // 3. Left View (Image/left.png)
+            camera.Position = glm::vec3(4.6f, 1.90f, -0.8f);
+            camera.Yaw = 178.0f;
+            camera.Pitch = -5.0f;
+            camera.Zoom = 45.0f;
+            camera.updateCameraVectors();
+            cout << "[Camera View 3] LEFT VIEW (Looking at windows & outdoor campus scenery)" << endl;
+            break;
+        case VIEW_RIGHT: // 4. Right View (Image/right.png)
+            camera.Position = glm::vec3(-4.6f, 2.00f, -0.8f);
+            camera.Yaw = -2.0f;
+            camera.Pitch = -5.0f;
+            camera.Zoom = 45.0f;
+            camera.updateCameraVectors();
+            cout << "[Camera View 4] RIGHT VIEW (Looking at door, hallway corridor & waving robot)" << endl;
             break;
     }
 }
@@ -260,7 +260,7 @@ int main()
 
     // 2. Create GLFW Window
     GLFWwindow* window = glfwCreateWindow(SCR_WIDTH, SCR_HEIGHT, 
-        "CSE 444: 3D Classroom Model with Shading, Animation & Multi-Light", NULL, NULL);
+        "CSE 444: 3D Robotics Classroom Model with Shading, Animation & Multi-Light", NULL, NULL);
     if (window == NULL)
     {
         std::cout << "Failed to create GLFW window" << std::endl;
@@ -357,35 +357,38 @@ int main()
     glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)(3 * sizeof(float)));
     glEnableVertexAttribArray(1);
 
-    // Initial camera view
-    setCameraPreset(VIEW_BACK);
+    // Initial camera view (Key 1: Front View)
+    setCameraPreset(VIEW_FRONT);
 
     cout << "==========================================================" << endl;
-    cout << " 3D CLASSROOM - EASY 4-VIEW & INTERACTION CONTROLS" << endl;
+    cout << "  3D ROBOTICS CLASSROOM - INTERACTION & CONTROL GUIDE     " << endl;
     cout << "==========================================================" << endl;
-    cout << " The 4 Core Views (Matching Classroom.jpg Reference):" << endl;
-    cout << "   [1] or [B]           : View 1 - BACK VIEW (Initial Main Perspective)" << endl;
-    cout << "   [2] or [G]           : View 2 - SIDE VIEW (Profile of Desks & Windows)" << endl;
-    cout << "   [3] or [T]           : View 3 - TOP VIEW (Overhead Layout Arrangement)" << endl;
-    cout << "   [4] or [F]           : View 4 - TEACHER VIEW (Podium looking at students)" << endl;
-    cout << "   [0] or [Home]        : Reset to View 1 (Initial View)" << endl;
-    cout << "   [V] or [Tab]         : Cycle through all 4 views (1 -> 2 -> 3 -> 4)" << endl;
+    cout << " The 4 Core Views:" << endl;
+    cout << "   [1] : View 1 - FRONT VIEW (Blackboard & Teacher Podium)" << endl;
+    cout << "   [2] : View 2 - BACK VIEW  (Student Desks & Entrance from Podium)" << endl;
+    cout << "   [3] : View 3 - LEFT VIEW  (Windows & Outdoor Campus Scenery)" << endl;
+    cout << "   [4] : View 4 - RIGHT VIEW (Door, Hallway Corridor & Robot)" << endl;
+    cout << "   [R] : Master Reset to View 1" << endl;
     cout << endl;
     cout << " Camera Navigation:" << endl;
     cout << "   [Up / Down Arrow]    : Move Forward / Backward" << endl;
     cout << "   [Left / Right Arrow] : Turn Left / Turn Right (Smooth Look)" << endl;
-    cout << "   [Shift + Left/Right] : Slide / Strafe Left / Right" << endl;
-    cout << "   [W, A, S, D]         : Standard Move (Forward, Back, Left, Right)" << endl;
     cout << "   [Shift + Up/Down]    : Move Camera Height Up / Down" << endl;
     cout << "   [Mouse Drag]         : Free Look around" << endl;
     cout << endl;
+    cout << " Interactive 3D Room Transformations:" << endl;
+    cout << "   [T + Up / Down]      : Translate Room Up / Down (+Y / -Y)" << endl;
+    cout << "   [T + Right / Left]   : Translate Room Right / Left (+X / -X)" << endl;
+    cout << "   [T + PgUp / PgDn]    : Translate Room Closer / Farther (+Z / -Z)" << endl;
+    cout << "   [X], [Y], [Z]        : Rotate Room on Axis (Hold Shift to reverse)" << endl;
+    cout << "   [M + Up / Down]      : Scale Room Uniformly (Bigger / Smaller)" << endl;
+    cout << endl;
     cout << " Moving Objects & Interactive Features:" << endl;
     cout << "   [D]                  : Open / Close Classroom Door" << endl;
-    cout << "   [Clock Second Hand]  : Rotates Clockwise continuously" << endl;
     cout << "   [F]                  : Toggle Ceiling Fan On / Off" << endl;
     cout << "   [+] / [-]            : Increase / Decrease Fan Speed" << endl;
     cout << "   [5, 6, 7, 8]         : Toggle Point Lights 1, 2, 3, 4 Individually" << endl;
-    cout << "   [L]                  : Toggle All Ceiling Point Lights (Master Switch - Unchanged)" << endl;
+    cout << "   [L]                  : Toggle All Ceiling Point Lights (Master Switch)" << endl;
     cout << "   [P] (or [S])         : Toggle Projector & Switch Board to Whiteboard Screen" << endl;
     cout << "   [R]                  : Reset Camera, Room Transformations & Lights" << endl;
     cout << "==========================================================" << endl;
@@ -2280,17 +2283,17 @@ void key_callback(GLFWwindow* window, int key, int scancode, int action, int mod
         return;
 
     // --- REQUIREMENT 2: THE 4 CORE CAMERA VIEWS (KEYS 1, 2, 3, 4) ---
-    // 1 Dedicated Key per View
-    if (key == GLFW_KEY_1) setCameraPreset(VIEW_BACK);     // Key 1: Back / Initial View
-    if (key == GLFW_KEY_2) setCameraPreset(VIEW_SIDE);     // Key 2: Side View
-    if (key == GLFW_KEY_3) setCameraPreset(VIEW_TOP);      // Key 3: Top View
-    if (key == GLFW_KEY_4) setCameraPreset(VIEW_TEACHER);  // Key 4: Front / Teacher View
+    // Matches the 4 project screenshots: Image/front.png, back.png, left.png, right.png
+    if (key == GLFW_KEY_1) setCameraPreset(VIEW_FRONT);    // Key 1: Front View (Image/front.png)
+    if (key == GLFW_KEY_2) setCameraPreset(VIEW_BACK);     // Key 2: Back View (Image/back.png)
+    if (key == GLFW_KEY_3) setCameraPreset(VIEW_LEFT);     // Key 3: Left View (Image/left.png)
+    if (key == GLFW_KEY_4) setCameraPreset(VIEW_RIGHT);    // Key 4: Right View (Image/right.png)
 
     // --- RESET VIEW & TRANSFORMATION: KEY R ---
     // R matches Reset!
     if (key == GLFW_KEY_R)
     {
-        setCameraPreset(VIEW_BACK);
+        setCameraPreset(VIEW_FRONT);
         rotateAngle_X = 0.0f; rotateAngle_Y = 0.0f; rotateAngle_Z = 0.0f;
         translate_X = 0.0f;   translate_Y = 0.0f;   translate_Z = 0.0f;
         scale_X = 1.0f;       scale_Y = 1.0f;       scale_Z = 1.0f;

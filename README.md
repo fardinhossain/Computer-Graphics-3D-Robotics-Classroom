@@ -1,4 +1,4 @@
-# Computer-Graphics-3D-Classroom
+# 🏫 Interactive 3D Classroom & Robotics Lab
 
 A feature-rich, interactive **3D Virtual Classroom & Embedded Robotics Laboratory** developed in C++ using **Modern OpenGL (3.3 Core Profile)** and **GLFW**. The project satisfies all core curriculum requirements for 3D Computer Graphics: **hierarchical 3D modeling transformations**, **viewing transformations**, **animated moving objects**, **multi-light Phong reflection shading** (Point Lights and Spotlight), and rich material properties.
 
@@ -114,10 +114,10 @@ All interactive controls follow a **1 Key = 1 Action** design principle with int
 | | `←` / `→` | **Left / Right Arrow** | Smoothly turn and pan camera view left / right |
 | **Elevation** | `Shift + ↑` / `↓` | **Shift + Up / Down** | Fly camera vertically upward / downward |
 | **Strafe** | `Shift + ←` / `→` | **Shift + Left / Right** | Slide sideways left / right without turning |
-| **Camera Views** | `1` | Preset **1** | Back View (Entrance looking down central aisle) |
-| | `2` | Preset **2** | Side View (Profile view of desks & windows) |
-| | `3` | Preset **3** | Top View (Overhead bird's-eye layout) |
-| | `4` | Preset **4** | Teacher View (Behind podium looking at students) |
+| **Camera Views** | `1` | Preset **1** | Front View (`front.png` — Entrance looking at blackboard & podium) |
+| | `2` | Preset **2** | Back View (`back.png` — From podium looking at student desks & entrance) |
+| | `3` | Preset **3** | Left View (`left.png` — Looking at windows & outdoor campus scenery) |
+| | `4` | Preset **4** | Right View (`right.png` — Looking at door, hallway corridor & waving robot) |
 | **Objects** | `D` | **D** for **D**oor | Smoothly opens ($85^\circ$) or closes the door leaf |
 | | `F` | **F** for **F**an | Toggles ceiling fan rotation On / Off |
 | | `+` / `-` | **Plus / Minus** | Increases / decreases fan rotation speed |
