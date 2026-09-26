@@ -14,11 +14,11 @@ A feature-rich, interactive **3D Virtual Classroom & Embedded Robotics Laborator
 
 ## 📸 Project Screenshots
 
-| Back View (Student Entrance Perspective) | Front View (Teacher Podium Vantage) |
+| Front View | Back View |
 | :---: | :---: |
-| ![Back View](Image/back.png) | ![Front View](Image/front.png) |
+| ![Front View](Image/front.png) | ![Back View](Image/back.png) |
 
-| Left Wall (Dual Windows & Point Light Control) | Right Wall (Animated Door, Hallway & Lighting) |
+| Left Wall | Right Wall |
 | :---: | :---: |
 | ![Left Wall](Image/left.png) | ![Right Wall](Image/right.png) |
 
@@ -28,26 +28,26 @@ A feature-rich, interactive **3D Virtual Classroom & Embedded Robotics Laborator
 
 ### Detailed Views & Highlights
 
-#### 1. Back View (Student Entrance Perspective)
-Looking down the classroom center aisle towards the chalkboard, wall clock, teacher's podium, student robotics workstations, and the continuous "bye-bye" waving robot:
-<p align="center">
-  <img src="Image/back.png" width="92%" alt="Classroom Back View">
-</p>
-
-#### 2. Front View (Teacher Podium Vantage)
-Front perspective looking back at all student desks, the embedded robotics hardware, laptops, and the rear entrance:
+#### 1. Front View
+View looking towards the front of the classroom. You can see the green blackboard, teacher desk with laptop, wall clock, ceiling fan, student desks with robotics kits, and the waving robot:
 <p align="center">
   <img src="Image/front.png" width="92%" alt="Classroom Front View">
 </p>
 
-#### 3. Left Wall (Dual Windows & Independent Lighting Controls)
-Architectural hollow white casings, protruding interior stone sill shelf, and 6 divided glass panes with mullions. Highlights the ceiling light fixtures above the student desks, demonstrating independent point light controls (ceiling point light fixtures toggled OFF via keys 5–8 to showcase dynamic lighting states):
+#### 2. Back View
+View looking towards the back of the classroom from behind the teacher desk. You can see the rows of student desks, chairs, laptops, robotics projects, and the back wall:
+<p align="center">
+  <img src="Image/back.png" width="92%" alt="Classroom Back View">
+</p>
+
+#### 3. Left Wall
+View of the left side of the classroom showing two large windows with white frames and ceiling lights that can be turned on or off:
 <p align="center">
   <img src="Image/left.png" width="92%" alt="Classroom Left Wall View">
 </p>
 
-#### 4. Right Wall (Animated Doorway, Corridor & Lighting)
-Animated door with dynamic wood color transition (deep walnut when closed, shifting to illuminated warm golden honey-oak when open), revealing a modeled school corridor outside with tiled floor and warm ceiling lamp:
+#### 4. Right Wall
+View of the right side showing the wooden door, the waving robot next to the teacher desk, wall clock, and student desks:
 <p align="center">
   <img src="Image/right.png" width="92%" alt="Classroom Right Wall View">
 </p>
