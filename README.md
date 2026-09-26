@@ -18,7 +18,7 @@ A feature-rich, interactive **3D Virtual Classroom & Embedded Robotics Laborator
 | :---: | :---: |
 | ![Back View](Image/back.png) | ![Front View](Image/front.png) |
 
-| Left Wall (Windows & Outdoor Campus View) | Right Wall (Animated Door, Hallway & Lighting) |
+| Left Wall (Dual Windows & Point Light Control) | Right Wall (Animated Door, Hallway & Lighting) |
 | :---: | :---: |
 | ![Left Wall](Image/left.png) | ![Right Wall](Image/right.png) |
 
@@ -40,8 +40,8 @@ Front perspective looking back at all student desks, the embedded robotics hardw
   <img src="Image/front.png" width="92%" alt="Classroom Front View">
 </p>
 
-#### 3. Left Wall (Realistic Windows & Outdoor Daylight Campus Scenery)
-Architectural hollow white casings, protruding interior stone sill shelf, 6 divided glass panes with mullions, and an outdoor scenery backdrop featuring sunny blue sky, sunlight glow, lawn, and green trees:
+#### 3. Left Wall (Dual Windows & Independent Lighting Controls)
+Architectural hollow white casings, protruding interior stone sill shelf, and 6 divided glass panes with mullions. Highlights the ceiling light fixtures above the student desks, demonstrating independent point light controls (ceiling point light fixtures toggled OFF via keys 5–8 to showcase dynamic lighting states):
 <p align="center">
   <img src="Image/left.png" width="92%" alt="Classroom Left Wall View">
 </p>
@@ -98,7 +98,7 @@ Four student tables (2 on the left, 2 on the right) are modeled as specialized *
 
 ### 6. Architectural Realism & Depth Fighting Elimination
 - **Z-Fighting Resolution**: Decoupled the depth planes between the vertical steel upright posts ($Z \in [0.14\text{m}, 0.18\text{m}]$) and the wooden backrest panel ($Z \in [0.113\text{m}, 0.135\text{m}]$), completely eliminating zebra striping.
-- **Window Scenery**: Outdoor lawn grass positioned completely outside the interior wall ($X \le -5.35\text{m}$), eliminating depth collision with the window sill.
+- **Window Architecture**: Hollow casings and divided multi-pane mullions positioned along the left wall with an interior stone sill shelf.
 - **Modeled Hallway / Corridor**: Opening the door reveals a modeled school corridor outside with tiled flooring, far corridor wall, and an emissive warm ceiling light fixture, eliminating black voids.
 
 ---
@@ -116,7 +116,7 @@ All interactive controls follow a **1 Key = 1 Action** design principle with int
 | **Strafe** | `Shift + ←` / `→` | **Shift + Left / Right** | Slide sideways left / right without turning |
 | **Camera Views** | `1` | Preset **1** | Front View (`front.png` — Entrance looking at blackboard & podium) |
 | | `2` | Preset **2** | Back View (`back.png` — From podium looking at student desks & entrance) |
-| | `3` | Preset **3** | Left View (`left.png` — Looking at windows & outdoor campus scenery) |
+| | `3` | Preset **3** | Left View (`left.png` — Dual windows, student tables & ceiling light fixtures) |
 | | `4` | Preset **4** | Right View (`right.png` — Looking at door, hallway corridor & waving robot) |
 | **Objects** | `D` | **D** for **D**oor | Smoothly opens ($85^\circ$) or closes the door leaf |
 | | `F` | **F** for **F**an | Toggles ceiling fan rotation On / Off |
